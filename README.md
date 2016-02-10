@@ -1,5 +1,3 @@
-Import from https://github.com/jdauphant/ansible-role-nginx (rev 5402635).
-
 nginx
 =====
 
@@ -210,4 +208,5 @@ Author Information
 
 - Original : Benno Joy
 - Modified by : DAUPHANT Julien
+- Modified by : Artefactual Systems
 
