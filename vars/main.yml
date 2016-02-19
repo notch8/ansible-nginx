@@ -1,8 +1,5 @@
 ---
 
-env:
- RUNLEVEL: 1
-
 redhat_pkg:
   - nginx
 
