@@ -4,12 +4,12 @@
   yum:
     name: "epel-release"
     state: "latest"
-  when: ansible_distribution == 'CentOS'
+  when: ansible_os_family == 'RedHat'
 
 - name: Install the nginx packages
   yum: name={{ item }} state=present
   with_items: "{{ redhat_pkg }}"
-  when: ansible_distribution == 'CentOS'
+  when: ansible_os_family == 'RedHat'
   tags: [packages,nginx]
 
 - name: Install the nginx packages
@@ -74,6 +74,7 @@
   register: result
   changed_when: "result.rc != 0"
   always_run: yes
+  become: true
   tags: [configuration,nginx]
 
 - name: Start the nginx service

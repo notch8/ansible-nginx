@@ -2,6 +2,7 @@
 
 redhat_pkg:
   - nginx
+  - libselinux-python
 
 ubuntu_pkg:
   - python-selinux
